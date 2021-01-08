@@ -10,9 +10,9 @@ df = df.sort_values('popularity') #sort by popularity since I'm only grabbing th
 df = df.drop_duplicates(subset=['title']) #had some duplicates with unique ids, so I removed them
 df = df.head(500) # take only the first 500 values 
 # print(df.tail(10)) #print and check if I actually got the right stuff out
-df['synopsis'] = df['synopsis'].astype(str) # tired reading the synopsis as a string type instead of object so I could use .replace()
+df['synopsis'] = df['synopsis'].astype(str) 
 df['title'] = df['title'].astype(str)
-# print(df.dtypes) # still gives me the synopsis and title as objects instead of strings and I can't figure out why
+# print(df.dtypes) 
 x = 0
 while x < 500:
 	
@@ -56,7 +56,7 @@ def gameSetup():
 
 		np.random.shuffle(choices)
 		#display the 4 options (randomly) with 1,2,3,4
-		print("1) ", choices[0], " 2) ", choices[1], " 3) ", choices[2]," 4) ", choices[3]) # work in progress
+		print("1) ", choices[0], " 2) ", choices[1], " 3) ", choices[2]," 4) ", choices[3]) 
 
 		
 		#set the correct answer to one of the 4 options
@@ -75,7 +75,7 @@ def gameSetup():
 		print()
 
 	print("That's the end! Your final score is: ", score)
-	print("Would you like to play again? 1 for yes, 0 for no")
+	print("Would you like to play again? 1 for yes, enter anything else to exit")
 	again = input()
 	if again == '1':
 		print()
