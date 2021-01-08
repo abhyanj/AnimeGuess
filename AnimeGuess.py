@@ -9,7 +9,7 @@ df = whole[['title', 'synopsis', 'popularity']].copy() #grab smaller dataframe w
 df = df.sort_values('popularity') #sort by popularity since I'm only grabbing the top 500ish
 df = df.drop_duplicates(subset=['title']) #had some duplicates with unique ids, so I removed them
 df = df.head(500) # take only the first 500 values 
-# print(df.tail(10)) #print and check if I actually got the right stuff out
+# print(df.tail(10)) 
 df['synopsis'] = df['synopsis'].astype(str) 
 df['title'] = df['title'].astype(str)
 # print(df.dtypes) 
