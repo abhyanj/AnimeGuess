@@ -3,7 +3,7 @@ import pandas as pd
 import random
 import numpy as np
 
-
+#checking something
 whole= pd.read_csv('animes.csv') #whole entire anime csv (contains names, rank, reviews, avg score, etc...)
 df = whole[['title', 'synopsis', 'popularity']].copy() #grab smaller dataframe with only names, popularity rank, and synopsis
 df = df.sort_values('popularity') #sort by popularity since I'm only grabbing the top 500ish
